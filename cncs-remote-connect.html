@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revise Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #333;
+            color: white;
+        }
+
+       header {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        iframe {
+            display: none; /* Hide the iframe when not in use */
+        }
+
+        #homeButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        #externalWebsiteLink {
+            display: block; /* Show the hyperlink */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #externalWebsiteLink a {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #accessInfo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #note {
+            text-align: center;
+            margin-top: 20px;
+            color: red; /* Set color to red for emphasis */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="staff-hub.html" id="homeButton">Back</a>
+        <h1>Revise Hub</h1>
+    </header>
+
+
+    <main>
+
+        <div id="accessInfo">
+            <p>To access your school desktop remotely, from home copy and paste the link below into your browser:</p>
+        </div>
+
+        <!-- Replace the URL with the website you want to embed -->
+        <iframe id="externalWebsite" src="" title="Embedded Website"></iframe>
+
+        <div id="externalWebsiteLink">
+            <!-- Replace the URL with the website you want to link -->
+            <a href="http://connectme.cncs.co.uk:8080/guacamole/#/?username=staff&password=QptGEigWWsRGeyBSiAoy" target="_blank">CNCS Remote Connect</a>
+        </div>
+
+        <div id="note">
+            <p>Please note: This link will NOT work from a computer on the school or college site.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Revise Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showExternalWebsite() {
+            // Show the iframe and hide the hyperlink
+            document.getElementById('externalWebsite').style.display = 'block';
+            document.getElementById('externalWebsiteLink').style.display = 'none';
+            // Set the iframe source to the provided link
+            document.getElementById('externalWebsite').src = 'http://connectme.cncs.co.uk:8080/guacamole/#/?username=staff&password=QptGEigWWsRGeyBSiAoy';
+        }
+    </script>
+</body>
+
+</html>
